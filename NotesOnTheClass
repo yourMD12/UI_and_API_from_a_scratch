@@ -1,0 +1,34 @@
+Three point verification
+We are creating our Cucumber framework from a scratch
+For Cucumber Framework:
+pom.xml: cucumber-java, cucumber-junit
+Creating classes: CukesRunner(features, glue)
+
+Utilities: Driver, ConfReader
+in order for them to work we need selenium-java and bonigarcia webDriver manager dependencies
+
+UI Part
+Connection: selenium, weDriverManager
+- create Config.properties
+Create our scenario and get the info UI
+we added Hooks, put there @Before and @After methods(maximize, screenshots, close)
+
+API part
+test it manually in the Postman
+we looked at our Swagger doc: in order to do any API request
+we need Bearer Token, 1st request is always for Token, 2nd - get user info
+automation: add dependency Rest-assured library
+apiUrl = https://cybertek-reservation-api-qa3.herokuapp.com
+go to Swagger doc to understand the API
+https://cybertek-reservation-api-docs.herokuapp.com/#introduction
+
+DataBase
+manually test: SQL developer, write the query to see the data
+automation: pom.xml -> type of dataBase
+DBUtils: its provides connection + useful methods
+in config.properties: we need to provide dB url and user info
+Hooks class u need to put "@db" tag
+
+1st verification: UI part
+2nd verification: API part
+3rd verification:
